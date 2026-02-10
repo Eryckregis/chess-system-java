@@ -1,5 +1,7 @@
 package boardgame;
 
+import java.awt.geom.Point2D;
+
 public class Board {
 
     private int rows;
@@ -26,5 +28,12 @@ public class Board {
 
     public void setColumns(int columns) {
         this.columns = columns;
+    }
+
+    public Piece piece(int row, int column) {
+        return pieces[row][column];
+    }
+    public Piece piece(Position position) {
+        return piece(position.getRow(), position.getColumn());
     }
 }
